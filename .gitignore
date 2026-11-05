@@ -51,14 +51,31 @@ Makefile
 install_manifest.txt
 compile_commands.json
 
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# IDE & Tooling
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+.vs/
+*.vcxproj.user
+
 # Temporary files
 *.tmp
 *.log
 *.bak
 *.swp
+.DS_Store
+Thumbs.db
 
 # vcpkg
 vcpkg_installed/
+.cache/
+Testing/
 
 # debug information files
 *.dwo
@@ -66,3 +83,6 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+
+# Project Generated Files
+data/test_log.csv
