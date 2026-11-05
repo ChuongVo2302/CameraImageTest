@@ -26,11 +26,3 @@ target_link_libraries(CameraTest
     PRIVATE 
         ${OpenCV_LIBS}
 )
-
-if(WIN32)
-    add_custom_command(TARGET CameraTest POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E copy_directory
-        "${OpenCV_DIR}/x64/vc16/bin"
-        "$<TARGET_FILE_DIR:CameraTest>"
-    )
-endif()
